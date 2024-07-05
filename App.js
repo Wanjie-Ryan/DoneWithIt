@@ -27,6 +27,12 @@ export default function App() {
       <Button color = "orange" title='click me' onPress={()=> Alert.alert('we alert', 'message', [
         {text:'yes'}
         ])}/>
+
+        <View style={{width:'50%', height:400, backgroundColor:'pink'}}></View>
+
+        <View></View>
+
+
       <StatusBar style="auto" />
     </View>
   );
