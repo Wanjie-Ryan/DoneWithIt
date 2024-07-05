@@ -24,7 +24,9 @@ export default function App() {
       <Image style ={styles.image} source={require('./assets/icon.png')}/>
       </TouchableHighlight>
 
-      <Button color = "orange" title='click me' onPress={()=> alert('hey')}/>
+      <Button color = "orange" title='click me' onPress={()=> Alert.alert('we alert', 'message', [
+        {text:'yes'}
+        ])}/>
       <StatusBar style="auto" />
     </View>
   );
