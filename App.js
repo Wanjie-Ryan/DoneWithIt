@@ -1,15 +1,30 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableWithoutFeedback, TouchableOpacity, TouchableHighlight, Button, Alert } from "react-native";
+
 
 export default function App() {
+
+  const handlePress = ()=>{
+    console.log("Button pressed");
+  }
+
   console.log("app is good");
 
-  let x;
-  // x.toString();
+  const handleImagePress = ()=>{
+    console.log("Image pressed");
+  }
+
+ 
 
   return (
     <View style={styles.container}>
-      <Text>Hello wes </Text>
+      <Text  onPress={handlePress} >Hello wes gbrrkhgcvbnghjkl;crcyvubnyinofetyugkilocuiuof ghjkltgvbhnjnyguhiljotyuigubhinjovbhinjokgvkhijlnocyuiocfygvubhinjcgvubhiyubincgvyjbkhinjccubincfgvhbjfgkhbnjcfgvbhjnbhnjcyuhbij </Text>
+      <TouchableHighlight onPress={handleImagePress}>
+
+      <Image style ={styles.image} source={require('./assets/icon.png')}/>
+      </TouchableHighlight>
+
+      <Button color = "orange" title='click me' onPress={()=> alert('hey')}/>
       <StatusBar style="auto" />
     </View>
   );
@@ -18,8 +33,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "purple",
     alignItems: "center",
     justifyContent: "center",
   },
+  image:{
+    width:200,
+    height:200
+  }
 });
